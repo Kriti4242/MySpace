@@ -48,35 +48,58 @@ body {
 
 @media (max-width: 768px) {
 
-  .app {
-    flex-direction: column;
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    z-index: 1000;
   }
 
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
+  .sidebar h2 {
+    display: none;
   }
 
   .sidebar button {
-    flex: 1;
-    text-align: center;
-    margin: 5px;
-    font-size: 14px;
+    margin: 0;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 8px;
   }
 
   .main {
+    margin-top: 70px;
     padding: 10px;
   }
 
-  input, select {
-    width: 100%;
-  }
-
-  .task, .note-card {
+  .task {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .task div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .note-card {
+    width: 100%;
+  }
+
+  .note-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
 }
+
 
