@@ -6,13 +6,17 @@ export default function Register(){
  const [error,setError]=useState("")
 
  const register = async () => {
-  try{
-    await API.post("/auth/register",form)
-    window.location="/"
-  }catch(err){
-    setError("Email already exists")
+  try {
+    const res = await API.post("/auth/register", form)
+
+    localStorage.setItem("token", res.data.token)
+    localStorage.setItem("user", JSON.stringify(res.data.user))
+
+    window.location = "/"
+  } catch (err) {
+    setError(err.response?.data?.message || "Email already exists")
   }
- }
+}
 
  return(
   <div className="container">
@@ -27,3 +31,4 @@ export default function Register(){
   </div>
  )
 }
+
