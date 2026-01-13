@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const User = require("../models/user")
+const User = require("../models/User")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 
@@ -90,3 +90,4 @@ router.post("/reset-password/:token", async (req,res)=>{
 
   res.json({message:"Password updated"})
 })
+
