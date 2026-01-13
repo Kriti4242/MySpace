@@ -3,7 +3,7 @@ import API from "../api"
 
 export default function Dashboard() {
   const [tab, setTab] = useState("study")
-  const [user, setUser] = useState({})
+ const [user, setUser] = useState(null)
 
   // Checklist
   const [tasks, setTasks] = useState([])
@@ -65,6 +65,14 @@ export default function Dashboard() {
     refresh()
   }
 
+  useEffect(() => {
+  API.get("/auth/me").then(r => setUser(r.data))
+  refresh()
+}, [])
+if (!user) {
+  return <div style={{ padding: 40 }}>Loading...</div>
+}
+
   return (
     <div className="app">
       <div className="sidebar">
@@ -77,7 +85,7 @@ export default function Dashboard() {
 
       <div className="main">
         <div className="topbar">
-          <h3>Welcome, {user.name}</h3>
+          <h3>Welcome, {user?.name || "User"}</h3>
           <button onClick={()=>{
             localStorage.removeItem("token")
             window.location="/"
@@ -222,3 +230,4 @@ export default function Dashboard() {
     </div>
   )
 }
+
