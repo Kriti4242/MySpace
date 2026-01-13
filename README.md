@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+🚀 MySpace – Personal Productivity SaaS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MySpace is a full-stack SaaS web application that helps users manage their study plans, job applications, personal notes, and daily tasks — all in one secure dashboard.
 
-## Available Scripts
+Live App:
+🔗 https://my-space-eight-lake.vercel.app
 
-In the project directory, you can run:
+Backend API:
+🔗 https://myspace-fsp3.onrender.com
 
-### `npm start`
+📌 Features
+🔐 Authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+User Registration & Login
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Password Hashing (bcrypt)
 
-### `npm test`
+JWT-based Authentication
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Forgot Password with Secure Reset Token
 
-### `npm run build`
+📚 Study Planner
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Add subjects, topics & deadlines
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Mark tasks as Completed or Incomplete
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Visual status indicators
 
-### `npm run eject`
+Delete study plans
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+💼 Job Tracker
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Track applied jobs (Company + Role)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Update status (Interviewed, Selected, Rejected)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Rejected jobs are automatically struck through
 
-## Learn More
+Delete job entries
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📝 Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create unlimited notes
 
-### Code Splitting
+Click to expand and read full content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Edit & delete notes
 
-### Analyzing the Bundle Size
+Search notes by title or content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+✔ Checklist
 
-### Making a Progressive Web App
+Add daily tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Search tasks
 
-### Advanced Configuration
+Delete completed tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🔎 Search Everywhere
 
-### Deployment
+Search in Study Plans
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Search Jobs
 
-### `npm run build` fails to minify
+Search Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Search Checklist
+
+📱 Mobile Friendly
+
+Responsive layout
+
+Mobile top-navigation
+
+Touch-friendly UI
+
+🛠 Tech Stack
+
+Frontend
+
+React.js
+
+CSS (Responsive UI)
+
+Axios
+
+Backend
+
+Node.js
+
+Express.js
+
+JWT Authentication
+
+Bcrypt Password Hashing
+
+MongoDB (Mongoose)
+
+Cloud
+
+Frontend: Vercel
+
+Backend: Render
+
+Database: MongoDB Atlas
+
+🔐 Security
+
+Passwords are hashed using bcrypt
+
+JWT tokens protect all APIs
+
+Each user can access only their own data
+
+Secure password reset tokens with expiry
+
+📦 Installation (Local)
+1️⃣ Clone repository
+git clone https://github.com/yourusername/MySpace.git
+
+2️⃣ Backend
+cd backend
+npm install
+npm start
+
+
+Create .env
+
+MONGO_URL=your_mongodb_url
+JWT_SECRET=your_secret
+
+3️⃣ Frontend
+cd frontend
+npm install
+npm start
+
+🌍 Production Architecture
+Vercel (Frontend)
+        ↓
+Render (Backend)
+        ↓
+MongoDB Atlas (Database)
