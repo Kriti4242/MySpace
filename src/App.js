@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import Login from "./pages/Login"
-import Register from "./pages/Register"
-import Dashboard from "./pages/Dashboard"
-import Forgot from "./pages/ForgotPassword"
-import ResetPassword from "./pages/ResetPassword"
+import Login from "./pages/Login.jsx"
+import Register from "./pages/Register.jsx"
+import Dashboard from "./pages/Dashboard.jsx"
+import Forgot from "./pages/ForgotPassword.jsx"
+import ResetPassword from "./pages/ResetPassword.jsx"
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token")
