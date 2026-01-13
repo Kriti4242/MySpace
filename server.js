@@ -1,6 +1,9 @@
 require("dotenv").config()
 const express = require("express")
-const cors = require("cors")
+app.use(cors({
+  origin: "https://my-space-eight-lake.vercel.app",
+  credentials: true
+}))
 const mongoose = require("mongoose")
 
 const app = express()   
@@ -24,3 +27,4 @@ app.use("/tasks", require("./routes/tasks"))
 app.use("/study", require("./routes/study"))
 app.use("/jobs", require("./routes/jobs"))
 app.use("/notes", require("./routes/notes"))
+
