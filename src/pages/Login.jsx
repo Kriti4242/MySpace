@@ -8,9 +8,10 @@ export default function Login(){
 
  const login = async () => {
   try{
-    const res = await API.post("/auth/login",{email,password})
-    localStorage.setItem("token",res.data.token)
-    window.location="/dashboard"
+const res = await API.post("/auth/login",{email,password})
+localStorage.setItem("token", res.data.token)
+localStorage.setItem("user", JSON.stringify(res.data.user))
+window.location="/"
   }catch(err){
     setError(err.response?.data?.message || "Something went wrong")
   }
@@ -36,4 +37,5 @@ export default function Login(){
   </div>
  )
 }
+
 
