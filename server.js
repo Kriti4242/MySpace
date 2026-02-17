@@ -8,10 +8,7 @@ const app = express()
 
 // ✅ CORS
 app.use(cors({
-  origin: [
-    "https://my-space-eight-lake.vercel.app",
-    "http://localhost:3000"
-  ],
+  origin: true,
   credentials: true
 }))
 
@@ -33,3 +30,4 @@ app.use("/notes", require("./routes/notes"))
 app.listen(5000, () => {
   console.log("Server running on port 5000")
 })
+
