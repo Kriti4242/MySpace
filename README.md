@@ -1,4 +1,4 @@
-🚀 MySpace – Personal Productivity SaaS
+## 🚀 MySpace – Personal Productivity SaaS
 
 MySpace is a full-stack SaaS web application that helps users manage their study plans, job applications, personal notes, and daily tasks — all in one secure dashboard.
 
@@ -8,74 +8,75 @@ Live App:
 Backend API:
 🔗 https://myspace-fsp3.onrender.com
 
-📌 Features
-🔐 Authentication
+## 📌 Features
 
-User Registration & Login
+🔐 **Authentication**
 
-Password Hashing (bcrypt)
+- User Registration & Login
 
-JWT-based Authentication
+- Password Hashing (bcrypt)
 
-Forgot Password with Secure Reset Token
+- JWT-based Authentication
 
-📚 Study Planner
+- Forgot Password with Secure Reset Token
 
-Add subjects, topics & deadlines
+📚 **Study Planner**
 
-Mark tasks as Completed or Incomplete
+- Add subjects, topics & deadlines
 
-Visual status indicators
+- Mark tasks as Completed or Incomplete
 
-Delete study plans
+- Visual status indicators
 
-💼 Job Tracker
+- Delete study plans
 
-Track applied jobs (Company + Role)
+💼 **Job Tracker**
 
-Update status (Interviewed, Selected, Rejected)
+- Track applied jobs (Company + Role)
 
-Rejected jobs are automatically struck through
+- Update status (Interviewed, Selected, Rejected)
 
-Delete job entries
+- Rejected jobs are automatically struck through
 
-📝 Notes
+- Delete job entries
 
-Create unlimited notes
+📝 **Notes**
 
-Click to expand and read full content
+- Create unlimited notes
 
-Edit & delete notes
+- Click to expand and read full content
 
-Search notes by title or content
+- Edit & delete notes
 
-✔ Checklist
+- Search notes by title or content
 
-Add daily tasks
+✔ **Checklist**
 
-Search tasks
+- Add daily tasks
 
-Delete completed tasks
+- Search tasks
 
-🔎 Search Everywhere
+- Delete completed tasks
 
-Search in Study Plans
+🔎 **Search Everywhere**
 
-Search Jobs
+- Search in Study Plans
 
-Search Notes
+- Search Jobs
 
-Search Checklist
+- Search Notes
 
-📱 Mobile Friendly
+- Search Checklist
 
-Responsive layout
+📱 **Mobile Friendly**
 
-Mobile top-navigation
+- Responsive layout
 
-Touch-friendly UI
+- Mobile top-navigation
 
-🛠 Tech Stack
+- Touch-friendly UI
+
+## 🛠 Tech Stack
 
 Frontend
 
@@ -99,13 +100,13 @@ MongoDB (Mongoose)
 
 Cloud
 
-Frontend: Vercel
+**Frontend: Vercel**
 
-Backend: Render
+**Backend: Render**
 
-Database: MongoDB Atlas
+**Database: MongoDB Atlas**
 
-🔐 Security
+# 🔐 Security
 
 Passwords are hashed using bcrypt
 
@@ -116,28 +117,41 @@ Each user can access only their own data
 Secure password reset tokens with expiry
 
 📦 Installation (Local)
+
+```
 1️⃣ Clone repository
 git clone https://github.com/yourusername/MySpace.git
+```
 
 2️⃣ Backend
+
+```
 cd backend
 npm install
 npm start
-
+```
 
 Create .env
 
+```
 MONGO_URL=your_mongodb_url
 JWT_SECRET=your_secret
+```
 
 3️⃣ Frontend
+
+```
 cd frontend
 npm install
 npm start
+```
 
 🌍 Production Architecture
+
+```
 Vercel (Frontend)
-        ↓
+↓
 Render (Backend)
-        ↓
+↓
 MongoDB Atlas (Database)
+```
